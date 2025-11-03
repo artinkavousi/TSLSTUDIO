@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>01 — TSL Gradient</title>
+    <style>
+      html,body{height:100%;margin:0}
+      canvas{display:block}
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      import * as THREE from 'https://unpkg.com/three@0.180.0/build/three.module.js';
+      import { NodeMaterial, MeshBasicNodeMaterial } from 'https://unpkg.com/three@0.180.0/examples/jsm/nodes/materials/nodes.js';
+      import { uv, vec3, color, float, mul, add, clamp } from 'https://unpkg.com/three@0.180.0/examples/jsm/nodes/Nodes.js';
+
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10);
+      camera.position.z = 1;
+
+      const geo = new THREE.PlaneGeometry(2, 2);
+
+      // Build a simple TSL node graph: color = (uv.x, uv.y, 0.5)
+      const u = uv();
+      const col = vec3(u.x, u.y, float(0.5));
+      const mat = new MeshBasicNodeMaterial();
+      mat.colorNode = col;
+
+      const mesh = new THREE.Mesh(geo, mat);
+      scene.add(mesh);
+
+      window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      renderer.setAnimationLoop(() => {
+        renderer.render(scene, camera);
+      });
+    </script>
+  </body>
+</html>
