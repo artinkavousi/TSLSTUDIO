@@ -1,0 +1,36 @@
+{
+  "name": "tsltoolkit1",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm -r run test",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.4"
+  },
+  "pnpm": {
+    "packageExtensions": {
+      "three@*": {
+        "peerDependencies": {
+          "@types/webxr": "^0.5.13"
+        }
+      }
+    }
+  }
+}
+
+
+

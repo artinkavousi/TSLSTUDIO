@@ -1,1 +1,0 @@
-export { IndexSection } from './IndexSection';
