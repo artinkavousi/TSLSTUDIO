@@ -15,15 +15,19 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
-  plugins: [react(), glsl(), TanStackRouterVite()],
+  plugins: [
+    react(),
+    glsl(),
+    TanStackRouterVite({
+      routesDirectory: './packages/studio/routes',
+      generatedRouteTree: './packages/studio/routeTree.gen.ts',
+    }),
+  ],
   resolve: {
     alias: {
-      '@/routes': path.resolve(__dirname, 'src/routes'),
-      '@/components': path.resolve(__dirname, 'src/components'),
-      '@/stores': path.resolve(__dirname, 'src/stores'),
-      '@/utils': path.resolve(__dirname, 'src/utils'),
-      '@/tsl': path.resolve(__dirname, 'src/tsl'),
-      '@/sketches': path.resolve(__dirname, 'src/sketches'),
+      '@engine': path.resolve(__dirname, 'packages/engine'),
+      '@tsl': path.resolve(__dirname, 'packages/tsl'),
+      '@studio': path.resolve(__dirname, 'packages/studio'),
     },
   },
 })
