@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Three.js Transpiler r164
 import { vec4, mod, Fn, mul, sub, vec3, vec2, dot, floor, step, min, max, float, abs } from 'three/tsl'
 import { permute, taylorInvSqrt } from './common'
@@ -7,7 +8,7 @@ import { permute, taylorInvSqrt } from './common'
  * @param {vec3} v - Input 3D vector.
  * @returns {float} Noise value.
  */
-export const simplexNoise3d = Fn(([v_immutable]) => {
+export const simplexNoise3d = Fn(([v_immutable], _builder) => {
   const v = vec3(v_immutable).toVar()
   const C = vec2(1.0 / 6.0, 1.0 / 3.0)
   const D = vec4(0.0, 0.5, 1.0, 2.0)

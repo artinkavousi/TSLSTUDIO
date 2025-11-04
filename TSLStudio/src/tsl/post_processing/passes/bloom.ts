@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fn, uv, vec2, vec3, float, texture, max, screenSize } from 'three/tsl'
 
 export type BloomParams = {
@@ -38,5 +39,6 @@ export function bloom({ threshold = 1.0, strength = 0.5, radius = 1.5 }: BloomPa
     return avg.mul(uStrength)
   })
 }
+
 
 

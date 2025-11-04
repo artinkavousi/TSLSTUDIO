@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SketchesSplatRouteImport } from './routes/sketches.$'
+import { Route as DemosDemoIdRouteImport } from './routes/demos.$demoId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +23,39 @@ const SketchesSplatRoute = SketchesSplatRouteImport.update({
   path: '/sketches/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DemosDemoIdRoute = DemosDemoIdRouteImport.update({
+  id: '/demos/$demoId',
+  path: '/demos/$demoId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/demos/$demoId': typeof DemosDemoIdRoute
   '/sketches/$': typeof SketchesSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/demos/$demoId': typeof DemosDemoIdRoute
   '/sketches/$': typeof SketchesSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/demos/$demoId': typeof DemosDemoIdRoute
   '/sketches/$': typeof SketchesSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sketches/$'
+  fullPaths: '/' | '/demos/$demoId' | '/sketches/$'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sketches/$'
-  id: '__root__' | '/' | '/sketches/$'
+  to: '/' | '/demos/$demoId' | '/sketches/$'
+  id: '__root__' | '/' | '/demos/$demoId' | '/sketches/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DemosDemoIdRoute: typeof DemosDemoIdRoute
   SketchesSplatRoute: typeof SketchesSplatRoute
 }
 
@@ -65,11 +75,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SketchesSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/demos/$demoId': {
+      id: '/demos/$demoId'
+      path: '/demos/$demoId'
+      fullPath: '/demos/$demoId'
+      preLoaderRoute: typeof DemosDemoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DemosDemoIdRoute: DemosDemoIdRoute,
   SketchesSplatRoute: SketchesSplatRoute,
 }
 export const routeTree = rootRouteImport

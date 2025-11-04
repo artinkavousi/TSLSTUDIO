@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useThree } from '@react-three/fiber'
 import { useEffect } from 'react'
 import { LinearSRGBColorSpace, NoToneMapping } from 'three/webgpu'

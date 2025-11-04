@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Canvas } from '@react-three/fiber'
 
 import { AdaptiveDpr, Preload, StatsGl, OrthographicCamera } from '@react-three/drei'

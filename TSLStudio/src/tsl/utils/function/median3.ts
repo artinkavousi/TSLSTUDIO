@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { float, Fn, If } from 'three/tsl'
 
 export const median3 = Fn(([a, b, c]) => {

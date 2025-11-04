@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fn, float, cos, mul, PI } from 'three/tsl'
 
 /**

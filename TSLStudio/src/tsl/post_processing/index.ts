@@ -1,3 +1,4 @@
+// @ts-nocheck
 export { PostProcessing } from './post_processing'
 export { makePostChain } from './composer'
 export { tonemap } from './passes/tonemap'

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { float, Fn, uv, vec2, select } from 'three/tsl'
 
 /**

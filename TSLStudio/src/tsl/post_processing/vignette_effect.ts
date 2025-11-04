@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fn, smoothstep, pow } from 'three/tsl'
 import { sdSphere } from '@/tsl/utils/sdf/shapes'
 

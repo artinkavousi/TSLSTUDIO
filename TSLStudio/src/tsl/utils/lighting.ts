@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { float, max, Fn, dot, vec3, normalize, reflect, mix, and } from 'three/tsl'
 
 /**

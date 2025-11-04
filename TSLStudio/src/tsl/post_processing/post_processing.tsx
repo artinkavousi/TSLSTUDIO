@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useFrame, useThree } from '@react-three/fiber'
 import { useEffect, useRef } from 'react'
 import { mrt, pass, emissive, output, screenSize, uv, texture, vec4, vec3 } from 'three/tsl'

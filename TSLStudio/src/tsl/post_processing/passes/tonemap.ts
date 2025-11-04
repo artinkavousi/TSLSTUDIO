@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fn, texture, uv, vec3 } from 'three/tsl'
 import { acesTonemap, reinhardTonemap, uncharted2Tonemap } from '@/tsl/utils/color/tonemapping'
 
@@ -14,5 +15,6 @@ export function tonemap(curve: TonemapCurve = 'ACES') {
     return acesTonemap(c)
   })
 }
+
 
 

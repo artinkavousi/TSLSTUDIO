@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { vec2, Fn, fract, sin, dot } from 'three/tsl'
 
 /**

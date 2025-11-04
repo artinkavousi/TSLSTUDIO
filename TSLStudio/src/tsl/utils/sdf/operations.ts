@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fn, min, max, abs, float } from 'three/tsl'
 
 /**

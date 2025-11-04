@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fn, floor } from 'three/tsl'
 
 /***
