@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": false,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "sourceMap": true,
+    "types": ["node"],
+    "newLine": "lf",
+    "paths": {
+      "@tslstudio/tsl": ["packages/tsl/src/index.ts"],
+      "@tslstudio/tsl/*": ["packages/tsl/src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "coverage"]
+}
+
