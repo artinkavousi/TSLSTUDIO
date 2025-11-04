@@ -41,3 +41,4 @@ echo "1. Review the commit: git show"
 echo "2. Push to remote: git push origin main"
 echo "3. Or merge to main: git checkout main && git merge <your-branch>"
 
+
