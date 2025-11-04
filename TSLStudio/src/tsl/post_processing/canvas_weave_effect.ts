@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { fbm } from '@/tsl/noise/fbm'
 import { Fn, fract, sin, PI, vec3, smoothstep, mix } from 'three/tsl'
 

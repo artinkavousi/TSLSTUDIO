@@ -24,6 +24,7 @@ export default defineConfig({
       '@/utils': path.resolve(__dirname, 'src/utils'),
       '@/tsl': path.resolve(__dirname, 'src/tsl'),
       '@/sketches': path.resolve(__dirname, 'src/sketches'),
+      '@engine': path.resolve(__dirname, 'engine'),
     },
   },
 })

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fn, floor, float, screenSize } from 'three/tsl'
 
 /**

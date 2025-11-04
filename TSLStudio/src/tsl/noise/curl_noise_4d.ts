@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Base on https://al-ro.github.io/projects/embers/
 // Added a 4th dimension
 

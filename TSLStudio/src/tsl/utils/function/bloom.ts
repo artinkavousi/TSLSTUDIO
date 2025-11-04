@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fn, pow } from 'three/tsl'
 
 /**

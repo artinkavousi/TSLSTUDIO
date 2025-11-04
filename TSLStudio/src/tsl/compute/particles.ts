@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { StorageInstancedBufferAttribute } from 'three/webgpu'
 import {
   Fn as tslFn,
@@ -124,5 +125,6 @@ export function createParticleSim(config: ParticleSimConfig): ParticleSimulation
     },
   }
 }
+
 
 

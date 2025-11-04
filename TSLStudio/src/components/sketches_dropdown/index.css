@@ -14,6 +14,24 @@
     gap: 8px;
   }
 
+  .sketches-list__section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & + .sketches-list__section {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  .sketches-list__section-title {
+    font-size: 0.95rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(226, 232, 255, 0.65);
+  }
+
   .sketch-card {
     display: flex;
     background: #212225;

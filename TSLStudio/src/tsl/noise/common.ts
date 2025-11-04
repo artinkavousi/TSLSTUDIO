@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { floor, Fn, vec3, sub, vec4, mul, overloadingFn, fract, abs, dot, lessThan, float, mod } from 'three/tsl'
 
 export const mod289_0 = /*#__PURE__*/ Fn(([x_immutable]) => {

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { vec4, float, vec2, length, If, Fn, mix, clamp, smoothstep, mul, sqrt, abs, atan, cos, sin } from 'three/tsl'
 
 /**

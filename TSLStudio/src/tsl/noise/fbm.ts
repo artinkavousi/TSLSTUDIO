@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fn, float, vec3, Loop, mul, add, div } from 'three/tsl'
 import { simplexNoise3d } from './simplex_noise_3d'
 

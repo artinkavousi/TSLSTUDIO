@@ -7,6 +7,20 @@ type SketchInfo = {
   path: string
   url: string
 }
+
+const ENGINE_DEMOS: SketchInfo[] = [
+  {
+    name: 'PBR Showcase',
+    path: '/demos/pbr',
+    url: '/demos/pbr',
+  },
+  {
+    name: 'GPU Particle Flow',
+    path: '/demos/particles',
+    url: '/demos/particles',
+  },
+]
+
 export function SketchesDropdown() {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const [showSketches, setShowSketches] = useState(false)
@@ -65,13 +79,30 @@ export function SketchesDropdown() {
           <div className='sketches-dropdown'>
             <div className='sketches-dropdown__content'>
               <div className='sketches-list'>
-                <div className='sketches-list__grid'>
-                  {sketches.map((sketch) => (
-                    <Link key={sketch.path} to={sketch.url} className='sketch-card'>
-                      <h3 className='sketch-card__title'>{sketch.name}</h3>
-                      <div className='sketch-card__path'>{sketch.path}</div>
-                    </Link>
-                  ))}
+                {sketches.length > 0 && (
+                  <div className='sketches-list__section'>
+                    <div className='sketches-list__section-title'>Sketch Library</div>
+                    <div className='sketches-list__grid'>
+                      {sketches.map((sketch) => (
+                        <Link key={sketch.path} to={sketch.url} className='sketch-card'>
+                          <h3 className='sketch-card__title'>{sketch.name}</h3>
+                          <div className='sketch-card__path'>{sketch.path}</div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <div className='sketches-list__section'>
+                  <div className='sketches-list__section-title'>Engine Demos</div>
+                  <div className='sketches-list__grid'>
+                    {ENGINE_DEMOS.map((demo) => (
+                      <Link key={demo.url} to={demo.url} className='sketch-card'>
+                        <h3 className='sketch-card__title'>{demo.name}</h3>
+                        <div className='sketch-card__path'>{demo.path}</div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

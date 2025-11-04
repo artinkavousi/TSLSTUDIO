@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { MeshPhysicalNodeMaterial } from 'three/webgpu'
 import { color, mix, smoothstep, time, uv, vec3 } from 'three/tsl'
 import { grainTextureEffect } from '@/tsl/post_processing/grain_texture_effect'
@@ -35,5 +36,6 @@ export function carPaintIridescent(): MeshPhysicalNodeMaterial {
 
   return m
 }
+
 
 

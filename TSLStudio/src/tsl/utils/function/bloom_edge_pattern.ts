@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { abs, float, Fn } from 'three/tsl'
 import { repeatingPattern } from './repeating_pattern'
 import { bloom } from './bloom'

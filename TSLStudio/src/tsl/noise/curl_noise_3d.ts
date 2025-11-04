@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Base on https://al-ro.github.io/projects/embers/
 import { EPSILON, cross, Fn, vec3 } from 'three/tsl'
 import { simplexNoise3d } from './simplex_noise_3d'

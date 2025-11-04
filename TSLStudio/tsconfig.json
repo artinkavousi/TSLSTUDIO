@@ -8,6 +8,8 @@
       "@/utils/*": ["./src/utils/*"],
       "@/sketches/*": ["./src/sketches/*"],
       "@/tsl/*": ["./src/tsl/*"],
+      "@engine": ["./engine/index.ts"],
+      "@engine/*": ["./engine/*"],
       // https://stackoverflow.com/questions/73019348/component-cannot-be-used-as-a-jsx-component-its-element-type-reactelementan
       "react": ["./node_modules/@types/react"]
     },

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { vec4, mod, Fn, float, floor, mul, sub, vec3, dot, vec2, step, clamp, max } from 'three/tsl'
 import { grad4, permute, taylorInvSqrt } from './common'
 

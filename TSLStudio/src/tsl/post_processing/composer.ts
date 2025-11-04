@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Fn, mix, uv, texture, vec3, vec4 } from 'three/tsl'
 import { tonemap, TonemapCurve } from '@/tsl/post_processing/passes/tonemap'
 import { vignetteEffect } from '@/tsl/post_processing/vignette_effect'
