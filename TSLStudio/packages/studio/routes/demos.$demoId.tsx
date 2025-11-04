@@ -1,7 +1,12 @@
 import { createFileRoute, notFound } from '@tanstack/react-router'
 import { Suspense } from 'react'
+<<<<<<< HEAD:TSLStudio/packages/studio/routes/demos.$demoId.tsx
 import { EngineDemoCanvas } from '@studio/components/canvas/engine_demo_canvas'
 import { SketchesDropdown } from '@studio/components/sketches_dropdown'
+=======
+import { EngineDemoCanvas } from '@/components/canvas/engine_demo_canvas'
+import { SketchesDropdown } from '@/components/sketches_dropdown'
+>>>>>>> f4523c07f6932061c6b020b30ee72d3c55e3fcd3:TSLStudio/src/routes/demos.$demoId.tsx
 
 const DEMOS = {
   pbr: {

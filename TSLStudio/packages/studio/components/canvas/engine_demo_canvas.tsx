@@ -1,14 +1,24 @@
 // @ts-nocheck
 import { useEffect, useRef } from 'react'
+<<<<<<< HEAD:TSLStudio/packages/studio/components/canvas/engine_demo_canvas.tsx
 import type { DemoSceneHandle } from '@studio/demos'
 import { core } from '@engine'
 import * as demos from '@studio/demos'
+=======
+import type { DemoSceneHandle } from '@engine/scenes'
+import { core, scenes } from '@engine'
+>>>>>>> f4523c07f6932061c6b020b30ee72d3c55e3fcd3:TSLStudio/src/components/canvas/engine_demo_canvas.tsx
 
 type DemoKey = 'pbr' | 'particles'
 
 const sceneFactories: Record<DemoKey, (renderer: import('three/webgpu').WebGPURenderer) => Promise<DemoSceneHandle>> = {
+<<<<<<< HEAD:TSLStudio/packages/studio/components/canvas/engine_demo_canvas.tsx
   pbr: demos.createPBRDemoScene,
   particles: demos.createParticleDemoScene,
+=======
+  pbr: scenes.createPBRDemoScene,
+  particles: scenes.createParticleDemoScene,
+>>>>>>> f4523c07f6932061c6b020b30ee72d3c55e3fcd3:TSLStudio/src/components/canvas/engine_demo_canvas.tsx
 }
 
 type EngineDemoCanvasProps = {
